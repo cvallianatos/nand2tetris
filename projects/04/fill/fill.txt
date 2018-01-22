@@ -1,0 +1,27 @@
+// Scan keyboard and if touched and held screen goes black
+// If key released, screen gors back to white
+
+while true
+{
+	(START)
+	if KBD = 1 then
+	   GOTO (BLACK)
+	esle
+ 	   GOTO (WHITE)
+        endif
+
+(BLACK)
+for i=SCREEN to SCREEN + 8191
+{
+	RAM[i] = 111111111111111
+}
+
+GOTO (START)
+
+(WHITE)
+for i=SCREEN to SCREEN + 8191
+{
+	RAM[i] = 111111111111111
+}
+
+}
